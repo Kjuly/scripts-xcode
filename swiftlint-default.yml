@@ -25,7 +25,7 @@ trailing_comma:
 
 # paths to ignore during linting. Takes precedence over `included`.
 excluded:
-  - .build 
-  - .swiftpm
-  - .github
+  - ../.build
+  - ../.swiftpm
+  - ../.github
 
