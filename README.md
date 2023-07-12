@@ -12,22 +12,24 @@ Then add the commend, e.g.:
 
 ## swiftlint.sh
 
-- Option 1 (use the `.swiftlint.yml` that located in the same folder of *.xcodeproj):
+```
+./scripts-xcode/swiftlint.sh [OPTIONS]
 
-      ./scripts-xcode/swiftlint.sh
+OPTIONS:
+- none (or just leave it empty): Use the .swiftlint.yml that located in the same folder of *.xcodeproj.
+- default: Use the swiftlint-default.yml that's provided.
+- override: Use both swiftlint-default.yml & .swiftlint.yml.
+- "path/to/custom/.swiftlint.yml": Use the path to a custom .swiftlint.yml file.
+```
+    
+Note for option **override**: It's same to the option **none** with a line at the top of the `.swiftlint.yml` file:
 
-- Option 2 (use the `swiftlint-default.yml` that's provided in /scripts-xcode):
-
-      ./scripts-xcode/swiftlint.sh default
-
-- Option 3 (use the custom path to your `.swiftlint.yml` file):
-   
-      ./scripts-xcode/swiftlint.sh path/to/your/custom/swiftlint_yml
-
+    parent_config: scripts-xcode/swiftlint-default.yml
 
 ## Troubleshoot
 
 If the script is unexecutable, just open your terminal and use the commend below to make it executable:
 
     $ chmod +x scripts-xcode/swiftlint.sh
+
 
