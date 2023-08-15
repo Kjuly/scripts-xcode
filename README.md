@@ -11,14 +11,13 @@ Then add the commend, e.g.:
 ```shell
 ./scripts-xcode/swiftlint.sh default
 ```
-
+or
 ```shell
-SWIFT_LINT=./scripts-xcode/swiftlint.sh
-if [ ! -f $SWIFT_LINT ]; then
-  echo "File not found for Rune Script (Swift Lint)."
-  exit
+if [ -e ./scripts-xcode/swiftlint.sh ]; then
+  ./scripts-xcode/swiftlint.sh default
+else
+  echo "File not found for Run Script (Swift Lint)."
 fi
-SWIFT_LINT default 
 ```
 
 ## swiftlint.sh
