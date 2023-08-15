@@ -9,6 +9,10 @@ Xcode Project -> Choose Target -> Build Phases -> Add Run Script Phase.
 Then add the commend, e.g.:
 
 ```shell
+./scripts-xcode/swiftlint.sh default
+```
+
+```shell
 SWIFT_LINT=./scripts-xcode/swiftlint.sh
 if [ ! -f $SWIFT_LINT ]; then
   echo "File not found for Rune Script (Swift Lint)."
