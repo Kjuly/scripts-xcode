@@ -3,3 +3,7 @@
 *.sw[po]
 .*.sw[po]
 
+# SPM
+Package.resolved
+.swiftpm
+.build
