@@ -9,12 +9,9 @@ Xcode Project -> Choose Target -> Build Phases -> Add Run Script Phase.
 Then add the commend, e.g.:
 
 ```shell
-./scripts-xcode/swiftlint.sh default
-```
-or
-```shell
-if [ -e ./scripts-xcode/swiftlint.sh ]; then
-  ./scripts-xcode/swiftlint.sh default
+SCRIPT_PATH="../scripts-xcode"
+if [ -e $SCRIPT_PATH/swiftlint.sh ]; then
+  $SCRIPT_PATH/swiftlint.sh $SCRIPT_PATH
 else
   echo "File not found for Run Script (Swift Lint)."
 fi
