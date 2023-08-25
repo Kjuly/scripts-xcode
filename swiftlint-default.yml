@@ -1,4 +1,11 @@
 
+disabled_rules:
+  - comment_spacing
+  - todo
+
+analyzer_rules:
+  - unused_import
+
 file_length:
   ignore_comment_only_lines: true
 
@@ -25,7 +32,7 @@ trailing_comma:
 
 # paths to ignore during linting. Takes precedence over `included`.
 excluded:
-  - ../.build
-  - ../.swiftpm
-  - ../.github
+  - .build
+  - .swiftpm
+  - .github
 
