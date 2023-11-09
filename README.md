@@ -20,19 +20,13 @@ fi
 ## swiftlint.sh
 
 ```markdown
-./scripts-xcode/swiftlint.sh [OPTIONS]
+./scripts-xcode/swiftlint.sh [PATH_TO_PARENT_CONFIG]
 
-OPTIONS:
-- none (or just leave it empty): Use the .swiftlint.yml that located in the same folder of *.xcodeproj.
-- default: Use the swiftlint-default.yml that's provided.
-- override: Use both swiftlint-default.yml & .swiftlint.yml.
-- "path/to/custom/.swiftlint.yml": Use the path to a custom .swiftlint.yml file.
+PATH_TO_PARENT_CONFIG:
+- Provide a path to a parent config file if needed.  
+- Leave it empty if you just need to use the .swiftlint.yml that located in the same folder of *.xcodeproj.
 ```
     
-Note for option **override**: It's same to the option **none** with a line at the top of the `.swiftlint.yml` file:
-
-    parent_config: scripts-xcode/swiftlint-default.yml
-
 ## Troubleshoot
 
 If the script is unexecutable, just open your terminal and use the commend below to make it executable:
