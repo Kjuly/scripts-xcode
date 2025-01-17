@@ -17,6 +17,12 @@ fi
 if test -d "/usr/local/bin/"; then
   PATH="/usr/local/bin/:${PATH}"
 fi
+
+# Support for Apple Silicon brew directory.
+if [[ "$(uname -m)" == arm64 ]]; then
+  PATH="/opt/homebrew/bin:${PATH}"
+fi
+
 export PATH
 
 # Do nothing if SwiftLint is unavailable.
