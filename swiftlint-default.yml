@@ -17,6 +17,10 @@ line_length:
   ignores_urls: true
   ignores_interpolated_strings: true
 
+nesting:
+  type_level:
+    warning: 2
+
 identifier_name:
   min_length: 1
   max_length: 1000
